@@ -6,6 +6,8 @@ import java.io.InputStreamReader;
 import java.util.ArrayList;
 
 public class ReverseArray {
+    
+    //optimized method for space complexity O(1), time complexity = O(n/2) => O(n)
     public static void reverseArrayTP(int[] arr) {
         int start = 0;
         int end = arr.length - 1;
@@ -22,6 +24,7 @@ public class ReverseArray {
         }
     }
 
+    //not so opitimized approach, Space Complexity: O(n), Time Complexity: O(n)
     public static void reverseArray(int[] arr) {
         ArrayList<Integer> reverse = new ArrayList<>();
         for (int i = arr.length - 1 ; i >=0; i--) {
