@@ -26,13 +26,11 @@ jobs:
           BADGE_URL="${{ steps.fetch-badge.outputs.badge_url }}"
           sed -i "s|!\[Wakatime Badge\](.*)|![Wakatime Badge]($BADGE_URL)|g" README.md
 
-      - name: Configure Git Identity
-        run: |
-          git config --global user.email "bhavyawahie@gmail.com"
-          git config --global user.name "Bhavya Wahie"
-
       - name: Commit and Push Changes
         run: |
+          git config --local user.email "action@github.com"
+          git config --local user.name "GitHub Action"
           git add README.md
           git commit -m "Update Wakatime Badge"
           git push
+          
