@@ -20,10 +20,10 @@ public class LinearSearch {
         BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(System.in));
         int numberToFind = Integer.parseInt(bufferedReader.readLine());
         var flag = linearSearch(numbers, numberToFind);
-        if(!flag) {
+        if(flag) {
+            System.out.println(numberToFind + " found");
+        }  else {
             System.out.println(numberToFind + " not found");
-        }  
-        System.out.println(numberToFind + " found");
-
+        }
     }
 }
