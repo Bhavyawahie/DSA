@@ -17,7 +17,7 @@ jobs:
         env:
           WAKATIME_API_KEY: ${{ secrets.WAKATIME_API_KEY }}
         run: |
-          WAKATIME_URL="https://wakatime.com/share/badges/projects?q=JAVA"
+          WAKATIME_URL="https://wakatime.com/api/v1/users/bhavyawahie/projects?q=JAVA"
           BADGE_URL=$(curl -s -u $WAKATIME_API_KEY: $WAKATIME_URL | grep -oP 'https://wakatime.com/badge/github/.+?\.svg')
           echo "::set-output name=badge_url::$BADGE_URL"
 
