@@ -24,7 +24,7 @@ jobs:
       - name: Update README
         run: |
           BADGE_URL="${{ steps.fetch-badge.outputs.badge_url }}"
-          sed -i "s|!\[Wakatime Badge\](.*)|![Wakatime Badge]($BADGE_URL)|g" README.md
+          sed -i "s|!\[Wakatime Badge\](.*)|![Wakatime Badge]($BADGE_URL)|g" readme.md
 
       - name: Configure Git Identity
         run: |
@@ -33,6 +33,6 @@ jobs:
 
       - name: Commit and Push Changes
         run: |
-          git add README.md
+          git add readme.md
           git commit -m "Update Wakatime Badge"
           git push
