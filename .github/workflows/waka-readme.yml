@@ -2,7 +2,7 @@ name: Update Wakatime Badge
 
 on:
   schedule:
-    - cron: "*/30 * * * *"
+    - cron: "*/2 * * * *"
 
 jobs:
   update-readme:
